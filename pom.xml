@@ -90,7 +90,7 @@
 								<argument>-port</argument>
 								<argument>9013</argument>
 								<argument>-database.0</argument>
-								<argument>-${hqsldatabase.path}/templateDB</argument>
+								<argument>${hqsldatabase.path}/templateDB</argument>
 								<argument>-dbname.0</argument>
 								<argument>templateDB</argument>
 							</arguments>

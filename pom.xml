@@ -15,6 +15,9 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
+		<hqsldatabase.path>src/main/resources/db</hqsldatabase.path>
+		<exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,4 +54,51 @@
 		</plugins>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>run_database</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>${maven-antrun-plugin.version}</version>
+						<executions>
+							<execution>
+								<id>configure_database</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<available file="${hqsldatabase.path}/templateDB.script" property="database.exist"/>
+										<echo message="${hqsldatabase.path}/templateDB.script"/>
+										<copy tofile="${hqsldatabase.path}/templateDB.script" file="${hqsldatabase.path}/templateDB.txt"/>
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>${exec-maven-plugin.version}</version>
+						<configuration>
+							<mainClass>org.hsqldb.Server</mainClass>
+							<arguments>
+								<argument>-port</argument>
+								<argument>9013</argument>
+								<argument>-database.0</argument>
+								<argument>-${hqsldatabase.path}/templateDB</argument>
+								<argument>-dbname.0</argument>
+								<argument>templateDB</argument>
+							</arguments>
+						</configuration>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>

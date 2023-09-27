@@ -7,6 +7,7 @@ import org.mapstruct.factory.Mappers;
 
 import java.util.List;
 
+
 @Mapper
 public interface ContactMapper {
     ContactMapper INSTANCE = Mappers.getMapper(ContactMapper.class);

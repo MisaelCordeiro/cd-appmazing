@@ -10,12 +10,14 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service("ContactService")
 @Lazy
 public class ContactService implements IContactService {
 
     @Autowired
     private ContactDao contactDao;
+
     @Override
     public ContactDTO queryContact(ContactDTO contactDTO) {
         Contact contact = ContactMapper.INSTANCE.toEntity(contactDTO);
@@ -23,7 +25,6 @@ public class ContactService implements IContactService {
 //        ContactDTO dto = ContactMapper.INSTANCE.toDTO(finalContact);
 //        return dto;
         return ContactMapper.INSTANCE.toDTO(contactDao.getReferenceById(contact.getId()));
-
     }
 
     @Override

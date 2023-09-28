@@ -6,8 +6,8 @@ package com.campusdual.appmazing.model.dto;
 public class ContactDTO {
     private int id;
     private String name;
-    private String first_name;
-    private String last_name;
+    private String first_surname;
+    private String last_surname;
     private int phone_number;
     private String email;
 
@@ -27,20 +27,20 @@ public class ContactDTO {
         this.name = name;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirst_surname() {
+        return first_surname;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirst_surname(String first_surname) {
+        this.first_surname = first_surname;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLast_surname() {
+        return last_surname;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLast_surname(String last_surname) {
+        this.last_surname = last_surname;
     }
 
     public int getPhone_number() {

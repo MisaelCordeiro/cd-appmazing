@@ -7,7 +7,6 @@ import java.util.Date;
 //importante decir que es una entidad.
 @Entity
 @Table(name = "PRODUCTS") // indicar nombre de la tabla de la bbdd
-
 public class Product {
     // indicar columnas de la tabla como atributos
 

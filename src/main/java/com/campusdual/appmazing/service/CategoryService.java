@@ -37,7 +37,7 @@ public class CategoryService implements ICategoryService {
 
     @Override
     public int updateCategory(CategoryDTO categoryDTO){
-        insertCategory(categoryDTO);
+        return insertCategory(categoryDTO);
     }
 
     @Override

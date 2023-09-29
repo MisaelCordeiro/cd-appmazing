@@ -35,6 +35,62 @@
 			"response": []
 		},
 		{
+			"name": "Test Controller Category -R",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Misa",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Controller Category  + name -R",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Misa",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Test Controller Method -R",
 			"request": {
 				"method": "GET",
@@ -220,6 +276,64 @@
 			"response": []
 		},
 		{
+			"name": "Category Get -R",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/contacts/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"contacts",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category Get All -R",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/contacts/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"contacts",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Contact Get All -R",
 			"request": {
 				"method": "POST",
@@ -278,6 +392,64 @@
 			"response": []
 		},
 		{
+			"name": "Category Add -C",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"Breixo\",\r\n    \"first_surname\": \"Casuas\",\r\n    \"last_surname\": \"Gz\",\r\n    \"phone_number\": 669669669,\r\n    \"email\": \"breixoc@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/contacts/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"contacts",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category Update -U",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"Breixo\",\r\n    \"first_surname\": \"Casuas\",\r\n    \"last_surname\": \"Gz\",\r\n    \"phone_number\": 669669669,\r\n    \"email\": \"breixoc@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/contacts/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"contacts",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Contact Update -U",
 			"request": {
 				"method": "POST",
@@ -308,6 +480,35 @@
 		},
 		{
 			"name": "Contact Delete -D",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"Breixo\",\r\n    \"first_surname\": \"Casuas\",\r\n    \"last_surname\": \"Gz\",\r\n    \"phone_number\": 669669669,\r\n    \"email\": \"breixoc@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/contacts/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"contacts",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category Delete -D",
 			"request": {
 				"method": "POST",
 				"header": [],
